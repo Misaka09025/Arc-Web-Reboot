@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The Acturus MCS | A new age is upon us</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="    Modular Cubesat Satellite SolutionWhere ideas take flight  The Arcturus MCS (Modular Cube Satellite) is a customizable platform designed to..."><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://arcturusaero.tech/mcs/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":false,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The Acturus MCS',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/dark.css"><link rel="stylesheet" href="/css/nav.css"><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-mcs"></i><span> MCS</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-about"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page fixed" id="page-header" style="background-image: url(/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/logo,png" alt="Logo"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-mcs"></i><span> MCS</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-about"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">The Acturus MCS</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="container" id="article-container"><div class="white-text">
+<center> 
+
+<h3 id="Modular-Cubesat-Satellite-Solution"><a href="#Modular-Cubesat-Satellite-Solution" class="headerlink" title="Modular Cubesat Satellite Solution"></a>Modular Cubesat Satellite Solution</h3><h1 id="Where-ideas-take-flight"><a href="#Where-ideas-take-flight" class="headerlink" title="Where ideas take flight"></a>Where ideas take flight</h1><div style="text-align: left;">
+
+<h3 id="The-Arcturus-MCS-Modular-Cube-Satellite-is-a-customizable-platform-designed-to-revolutionize-space-access-for-small-scale-research-teams-startups-and-academic-institutions-Combining-affordability-modularity-and-user-friendliness-the-Arcturus-MCS-offers-unparalleled-flexibility-and-capability-for-deploying-scientific-payloads-and-conducting-space-research"><a href="#The-Arcturus-MCS-Modular-Cube-Satellite-is-a-customizable-platform-designed-to-revolutionize-space-access-for-small-scale-research-teams-startups-and-academic-institutions-Combining-affordability-modularity-and-user-friendliness-the-Arcturus-MCS-offers-unparalleled-flexibility-and-capability-for-deploying-scientific-payloads-and-conducting-space-research" class="headerlink" title="The Arcturus MCS (Modular Cube Satellite) is a customizable platform designed to revolutionize space access for small-scale research teams, startups, and academic institutions. Combining affordability, modularity, and user-friendliness, the Arcturus MCS offers unparalleled flexibility and capability for deploying scientific payloads and conducting space research."></a>The Arcturus MCS (Modular Cube Satellite) is a customizable platform designed to revolutionize space access for small-scale research teams, startups, and academic institutions. Combining affordability, modularity, and user-friendliness, the Arcturus MCS offers unparalleled flexibility and capability for deploying scientific payloads and conducting space research.</h3><h1 id="Key-Features-Advantages"><a href="#Key-Features-Advantages" class="headerlink" title="Key Features &amp; Advantages"></a>Key Features &amp; Advantages</h1><ul>
+<li><h1 id="Modular-Design"><a href="#Modular-Design" class="headerlink" title="Modular Design"></a>Modular Design</h1><h3 id="Allows-easy-expantion-in-low-cost"><a href="#Allows-easy-expantion-in-low-cost" class="headerlink" title="Allows easy expantion in low cost"></a>Allows easy expantion in low cost</h3></li>
+<li><h1 id="User-Friendly-Interface"><a href="#User-Friendly-Interface" class="headerlink" title="User-Friendly Interface"></a>User-Friendly Interface</h1><h3 id="Enables-quick-get-on-hand"><a href="#Enables-quick-get-on-hand" class="headerlink" title="Enables quick get-on-hand"></a>Enables quick get-on-hand</h3></li>
+<li><h1 id="High-Performance-Payload-Bay"><a href="#High-Performance-Payload-Bay" class="headerlink" title="High-Performance Payload Bay"></a>High-Performance Payload Bay</h1><h3 id="2-6-modules-each-of-1-5U"><a href="#2-6-modules-each-of-1-5U" class="headerlink" title="2-6 modules, each of 1.5U"></a>2-6 modules, each of 1.5U</h3></li>
+<li><h1 id="Robust-Communication-Systems"><a href="#Robust-Communication-Systems" class="headerlink" title="Robust Communication Systems"></a>Robust Communication Systems</h1><h3 id="something-here"><a href="#something-here" class="headerlink" title="something here"></a>something here</h3></li>
+</ul>
+<h2 id="The-Arcturus-MCS-offers-a-competitive-edge-to-research-teams-by-providing-access-to-advanced-space-technology-and-research-capabilities-that-were-previously-only-available-to-larger-institutions-with-significant-financial-resources-This-democratization-of-space-access-helps-to-level-the-playing-field-enabling-more-diverse-and-innovative-research-to-be-conducted"><a href="#The-Arcturus-MCS-offers-a-competitive-edge-to-research-teams-by-providing-access-to-advanced-space-technology-and-research-capabilities-that-were-previously-only-available-to-larger-institutions-with-significant-financial-resources-This-democratization-of-space-access-helps-to-level-the-playing-field-enabling-more-diverse-and-innovative-research-to-be-conducted" class="headerlink" title="The Arcturus MCS offers a competitive edge to research teams by providing access to advanced space technology and research capabilities that were previously only available to larger institutions with significant financial resources. This democratization of space access helps to level the playing field, enabling more diverse and innovative research to be conducted."></a>The Arcturus MCS offers a competitive edge to research teams by providing access to advanced space technology and research capabilities that were previously only available to larger institutions with significant financial resources. This democratization of space access helps to level the playing field, enabling more diverse and innovative research to be conducted.</h2><h1 id="Application-Scenarios"><a href="#Application-Scenarios" class="headerlink" title="Application Scenarios"></a>Application Scenarios</h1><h3 id="The-Arcturus-MCS-is-ideal-for-a-wide-range-of-applications-including-Earth-observation-and-remote-sensing-atmospheric-research-and-weather-forecasting-space-weather-monitoring-and-prediction-space-debris-tracking-and-analysis-and-scientific-experiments-and-technology-demonstration"><a href="#The-Arcturus-MCS-is-ideal-for-a-wide-range-of-applications-including-Earth-observation-and-remote-sensing-atmospheric-research-and-weather-forecasting-space-weather-monitoring-and-prediction-space-debris-tracking-and-analysis-and-scientific-experiments-and-technology-demonstration" class="headerlink" title="The Arcturus MCS is ideal for a wide range of applications, including Earth observation and remote sensing, atmospheric research and weather forecasting, space weather monitoring and prediction, space debris tracking and analysis, and scientific experiments and technology demonstration."></a>The Arcturus MCS is ideal for a wide range of applications, including Earth observation and remote sensing, atmospheric research and weather forecasting, space weather monitoring and prediction, space debris tracking and analysis, and scientific experiments and technology demonstration.</h3><h1 id="Ready-to-take-your-research-to-new-heights"><a href="#Ready-to-take-your-research-to-new-heights" class="headerlink" title="Ready to take your research to new heights?"></a>Ready to take your research to new heights?</h1><h1 id="Contact-Arcturus-Aerospace-today-to-learn-more-about-the-Arcturus-MCS"><a href="#Contact-Arcturus-Aerospace-today-to-learn-more-about-the-Arcturus-MCS" class="headerlink" title="Contact Arcturus Aerospace today to learn more about the Arcturus MCS."></a>Contact Arcturus Aerospace today to learn more about the Arcturus MCS.</h1></div>
+
+
+
+
+
+
+
+
+
+</div></div></div></main><footer id="footer"><div id="footer-wrap"></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
